@@ -1,0 +1,15 @@
+# macOS Finder metadata
+.DS_Store
+
+# Node tooling (only if a build step is added later)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Editors
+.vscode/
+.idea/
+
+# Build output (uncomment if a generator is introduced)
+# dist/
+# .cache/

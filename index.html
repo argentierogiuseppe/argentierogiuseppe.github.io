@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- TODO(launch): remove this noindex once the content is final. -->
+    <meta name="robots" content="noindex" />
+
+    <title>Giuseppe Argentiero</title>
+    <meta name="description" content="" data-i18n-meta="seo.description" />
+
+    <link rel="alternate" hreflang="it" href="./?lang=it" />
+    <link rel="alternate" hreflang="en" href="./?lang=en" />
+    <link rel="alternate" hreflang="x-default" href="./" />
+
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Giuseppe Argentiero" />
+    <meta property="og:description" content="" data-i18n-meta="seo.description" />
+
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <a class="brand" href="#top" aria-label="Giuseppe Argentiero">GA</a>
+      <nav class="lang" aria-label="Language switch">
+        <button type="button" data-lang="it">IT</button>
+        <span class="lang-sep" aria-hidden="true">/</span>
+        <button type="button" data-lang="en">EN</button>
+      </nav>
+    </header>
+
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero">
+        <p class="eyebrow" data-i18n="hero.eyebrow"></p>
+        <h1 class="hero-name" data-i18n="hero.name"></h1>
+        <p class="hero-tagline" data-i18n="hero.tagline"></p>
+        <p class="hero-intro" data-i18n="hero.intro"></p>
+        <div class="cta-row">
+          <a class="btn btn-primary" data-link="blog" data-i18n="hero.ctaBlog" href="#" target="_blank" rel="noopener noreferrer"></a>
+          <a class="btn btn-ghost" href="#contact" data-i18n="hero.ctaContact"></a>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section" id="about">
+        <p class="kicker" data-i18n="about.kicker"></p>
+        <h2 class="section-title" data-i18n="about.title"></h2>
+        <div class="about-text">
+          <p data-i18n="about.p1"></p>
+          <p data-i18n="about.p2"></p>
+        </div>
+      </section>
+
+      <!-- METHOD -->
+      <section class="section section-alt" id="method">
+        <p class="kicker" data-i18n="method.kicker"></p>
+        <h2 class="section-title" data-i18n="method.title"></h2>
+        <div class="about-text">
+          <p data-i18n="method.p1"></p>
+          <p data-i18n="method.p2"></p>
+        </div>
+        <a class="btn btn-ghost" data-link="blog" data-i18n="method.cta" href="#" target="_blank" rel="noopener noreferrer"></a>
+      </section>
+
+      <!-- PUBLICATIONS (hidden until items exist) -->
+      <section class="section" id="publications">
+        <p class="kicker" data-i18n="publications.kicker"></p>
+        <h2 class="section-title" data-i18n="publications.title"></h2>
+        <p class="books-intro" data-i18n="publications.intro"></p>
+        <ul class="edu-list" id="publications-list"></ul>
+      </section>
+
+      <!-- BLOG -->
+      <section class="section book-band" id="blog">
+        <p class="kicker" data-i18n="blog.kicker"></p>
+        <h2 class="section-title" data-i18n="blog.title"></h2>
+        <p class="book-text" data-i18n="blog.text"></p>
+        <a class="btn btn-primary" data-link="blog" data-i18n="blog.cta" href="#" target="_blank" rel="noopener noreferrer"></a>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section section-alt" id="contact">
+        <p class="kicker" data-i18n="contact.kicker"></p>
+        <h2 class="section-title" data-i18n="contact.title"></h2>
+        <p class="contact-text" data-i18n="contact.text"></p>
+        <a class="btn btn-primary" id="contact-email" href="#" data-i18n="contact.emailLabel"></a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span class="footer-note" data-i18n="footer.note"></span>
+      <span class="footer-copy">© <span id="year"></span> Giuseppe Argentiero</span>
+    </footer>
+
+    <script src="./assets/js/content.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
