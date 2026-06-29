@@ -11,7 +11,11 @@ window.SITE_CONTENT = {
   meta: { defaultLang: "it", languages: ["it", "en"], domain: "giuseppeargentiero.github.io" },
 
   // Locale-independent.
-  links: { blog: "https://www.forzamassimarelativa.it/", email: "info@forzamassimarelativa.it" },
+  links: {
+    blog: "https://www.forzamassimarelativa.it/",
+    email: "info@forzamassimarelativa.it",
+    bodygon: "https://bodygon.com",
+  },
 
   it: {
     seo: {
@@ -25,15 +29,16 @@ window.SITE_CONTENT = {
       name: "Giuseppe Argentiero",
       tagline: "Lo studio e la misura della forza massima.",
       intro:
-        "Studio la forza e come misurarla. Dalla ricerca nasce la «Forza Massima Relativa»: un metodo per stimare l'1RM da una sola ripetizione, leggendo il tempo e lo spazio del movimento.",
+        "Studio la forza e come misurarla. Ideatore del metodo FMCP e della «Forza Massima Relativa»: stimo l'1RM da una sola ripetizione, leggendo il tempo e lo spazio del movimento.",
       ctaBlog: "Il blog",
       ctaContact: "Contatti",
     },
     about: {
       kicker: "Chi sono",
       title: "Misurare la forza, non solo allenarla",
-      p1: "Sono Giuseppe Argentiero. Mi occupo dello studio della forza massima e della sua misurazione: come determinarla, come leggerla nei parametri del movimento, come renderla un dato e non solo una stima.",
-      p2: "Sul blog «Forza Massima Relativa» raccolgo e documento questo lavoro, mettendolo in relazione con la letteratura scientifica della forza (Henneman, Bosco, Hill, Zatsiorsky).",
+      p1: "Sono Giuseppe Argentiero, ideatore del metodo FMCP e inventore del PerfecTraining, dispositivo poi evoluto in Bodygon. Da anni mi occupo di forza, preparazione atletica e valutazione della prestazione sportiva, con l'obiettivo di rendere l'allenamento più misurabile, pratico e comprensibile.",
+      p2: "Per me la forza non è soltanto una sensazione, ma una grandezza che si può osservare e misurare attraverso tempo, spazio e carico. Sul blog «Forza Massima Relativa» raccolgo e documento questo lavoro, in dialogo con la letteratura scientifica della forza.",
+      bodygonLink: "Inventore del PerfecTraining, oggi Bodygon →",
     },
     method: {
       kicker: "Il metodo",
@@ -78,15 +83,16 @@ window.SITE_CONTENT = {
       name: "Giuseppe Argentiero",
       tagline: "The study and measurement of maximum strength.",
       intro:
-        "I study strength and how to measure it. From that research comes «Forza Massima Relativa»: a method to estimate 1RM from a single repetition, reading the time and the space of the movement.",
+        "I study strength and how to measure it. Creator of the FMCP method and of «Forza Massima Relativa»: I estimate 1RM from a single repetition by reading the time and the space of the movement.",
       ctaBlog: "The blog",
       ctaContact: "Contact",
     },
     about: {
       kicker: "About",
       title: "Measuring strength, not just training it",
-      p1: "I'm Giuseppe Argentiero. I work on the study and measurement of maximum strength: how to determine it, how to read it in the parameters of movement, how to make it a measurement rather than just an estimate.",
-      p2: "On the «Forza Massima Relativa» blog I gather and document this work, relating it to the scientific literature on strength (Henneman, Bosco, Hill, Zatsiorsky).",
+      p1: "I'm Giuseppe Argentiero, creator of the FMCP method and inventor of PerfecTraining, the device that later evolved into Bodygon. For years I've worked on strength, athletic preparation and sports-performance assessment, with one goal: to make training more measurable, practical and understandable.",
+      p2: "For me strength isn't just a sensation, but a quantity that can be observed and measured through time, space and load. On the «Forza Massima Relativa» blog I gather and document this work, in dialogue with the scientific literature on strength.",
+      bodygonLink: "Inventor of PerfecTraining, now Bodygon →",
     },
     method: {
       kicker: "The method",

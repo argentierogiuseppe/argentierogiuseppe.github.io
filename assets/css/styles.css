@@ -127,6 +127,7 @@ a { color: inherit; }
 /* Text blocks (about, method) */
 .about-text { max-width: 64ch; }
 .about-text p { margin: 0 0 1rem; color: #e9e9ec; }
+.about-note { margin: 0.4rem 0 0; font-weight: 700; }
 
 /* Cards (reserved for future sections) */
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
