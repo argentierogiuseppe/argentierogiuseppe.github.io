@@ -38,7 +38,7 @@ window.SITE_CONTENT = {
       title: "Misurare la forza, non solo allenarla",
       p1: "Sono Giuseppe Argentiero, ideatore del metodo FMCP e inventore del PerfecTraining, dispositivo poi evoluto in Bodygon. Da anni mi occupo di forza, preparazione atletica e valutazione della prestazione sportiva, con l'obiettivo di rendere l'allenamento più misurabile, pratico e comprensibile.",
       p2: "Per me la forza non è soltanto una sensazione, ma una grandezza che si può osservare e misurare attraverso tempo, spazio e carico. Sul blog «Forza Massima Relativa» raccolgo e documento questo lavoro, in dialogo con la letteratura scientifica della forza.",
-      bodygonLink: "Inventore del PerfecTraining, oggi Bodygon →",
+      bodygonLink: "Inventore del PerfecTraining, oggi evoluto in",
     },
     method: {
       kicker: "Il metodo",
@@ -92,7 +92,7 @@ window.SITE_CONTENT = {
       title: "Measuring strength, not just training it",
       p1: "I'm Giuseppe Argentiero, creator of the FMCP method and inventor of PerfecTraining, the device that later evolved into Bodygon. For years I've worked on strength, athletic preparation and sports-performance assessment, with one goal: to make training more measurable, practical and understandable.",
       p2: "For me strength isn't just a sensation, but a quantity that can be observed and measured through time, space and load. On the «Forza Massima Relativa» blog I gather and document this work, in dialogue with the scientific literature on strength.",
-      bodygonLink: "Inventor of PerfecTraining, now Bodygon →",
+      bodygonLink: "Inventor of PerfecTraining, now evolved into",
     },
     method: {
       kicker: "The method",
