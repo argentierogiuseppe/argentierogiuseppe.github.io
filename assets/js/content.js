@@ -58,6 +58,7 @@ window.SITE_CONTENT = {
         { year: "97,5 kg", label: "3ª prova — oltre il limite funzionale stimato, non valida" },
       ],
       tagline: "«La forza massima non è una sensazione. È una questione di tempo.»",
+      photoCaption: "Podio della gara: 2° posto alla Coppa Italia FIPE di Bench Press. Volti oscurati per tutela della privacy (atleti minorenni).",
     },
     publications: {
       kicker: "Pubblicazioni",
@@ -124,6 +125,7 @@ window.SITE_CONTENT = {
         { year: "97.5 kg", label: "3rd attempt — beyond the estimated functional limit, no lift" },
       ],
       tagline: "\"Maximum strength isn't a sensation. It's a matter of time.\"",
+      photoCaption: "Competition podium: 2nd place at the FIPE Bench Press Coppa Italia. Faces obscured to protect privacy (minor athletes).",
     },
     publications: {
       kicker: "Publications",

@@ -165,9 +165,12 @@ a { color: inherit; }
 
 .books-intro { color: #e9e9ec; margin: 0 0 1.3rem; }
 
-/* Case-study tagline */
+/* Case-study tagline + photo */
 .case-tagline { margin: 1.6rem 0 0; font-size: 1.12rem; font-weight: 700; font-style: italic; color: var(--accent); }
 #case-list { margin-top: 1.4rem; }
+.case-figure { margin: 1.8rem 0 0; }
+.case-figure img { max-width: 340px; width: 100%; border-radius: 14px; border: 1px solid var(--line); background: #000; }
+.case-figure figcaption { color: var(--muted); font-size: 0.9rem; margin-top: 0.55rem; max-width: 340px; }
 
 /* Inline highlight link */
 .hl-link { color: var(--accent); text-decoration: none; font-weight: 700; white-space: nowrap; }
