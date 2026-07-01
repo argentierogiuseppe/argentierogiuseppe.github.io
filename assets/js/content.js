@@ -47,6 +47,18 @@ window.SITE_CONTENT = {
       p2: "Tempo e spazio sono parametri relativi, legati alla FMCP, la Forza Massima Concentrica Potenziale: «il tempo e lo spazio hanno valori equivalenti, si influenzano a vicenda», indipendentemente dall'esercizio.",
       cta: "Approfondisci sul blog",
     },
+    case: {
+      kicker: "Caso pratico",
+      title: "FMCP in gara: il warm-up come strumento decisionale",
+      p1: "Coppa Italia FIPE di Bench Press, Mesagne (BR), 24 maggio 2026. Su un atleta Sub-Junior il modello FMCP è stato applicato in tempo reale: da una sola alzata di riscaldamento (80 kg) è stata costruita in anticipo la strategia di gara.",
+      p2: "Le previsioni di tempo si sono rivelate accuratissime — un errore di appena 15 millisecondi sulla prima prova ufficiale — permettendo di scegliere i carichi, stimare lo sforzo richiesto e gestire il rischio competitivo. Risultato: 2° posto.",
+      items: [
+        { year: "87,5 kg", label: "1ª prova — previsto 1,317 s, reale 1,302 s (errore 15 ms)" },
+        { year: "92,5 kg", label: "2ª prova — previsto 2,173 s, reale 2,040 s" },
+        { year: "97,5 kg", label: "3ª prova — oltre il limite funzionale stimato, non valida" },
+      ],
+      tagline: "«La forza massima non è una sensazione. È una questione di tempo.»",
+    },
     publications: {
       kicker: "Pubblicazioni",
       title: "Ricerca & pubblicazioni",
@@ -100,6 +112,18 @@ window.SITE_CONTENT = {
       p1: "Maximum strength (1RM) can be reliably estimated from a single repetition at loads ≥ 80% of the max, by measuring the time of the concentric phase and the space — the vertical distance — the load travels.",
       p2: "Time and space are relative parameters tied to FMCP, the potential maximum concentric force: «time and space have equivalent values, they influence each other», independent of the specific exercise.",
       cta: "Read more on the blog",
+    },
+    case: {
+      kicker: "Case study",
+      title: "FMCP in competition: the warm-up as a decision tool",
+      p1: "FIPE Bench Press Coppa Italia, Mesagne (Italy), 24 May 2026. On a Sub-Junior athlete the FMCP model was applied in real time: from a single warm-up lift (80 kg) the competition strategy was built in advance.",
+      p2: "The time predictions proved remarkably accurate — just a 15-millisecond error on the first official attempt — making it possible to choose the loads, estimate the required effort and manage competitive risk. Result: 2nd place.",
+      items: [
+        { year: "87.5 kg", label: "1st attempt — predicted 1.317 s, actual 1.302 s (15 ms error)" },
+        { year: "92.5 kg", label: "2nd attempt — predicted 2.173 s, actual 2.040 s" },
+        { year: "97.5 kg", label: "3rd attempt — beyond the estimated functional limit, no lift" },
+      ],
+      tagline: "\"Maximum strength isn't a sensation. It's a matter of time.\"",
     },
     publications: {
       kicker: "Publications",

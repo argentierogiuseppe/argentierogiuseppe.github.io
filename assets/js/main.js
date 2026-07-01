@@ -59,7 +59,28 @@
     });
 
     renderPublications(dict);
+    renderCase(dict);
     localStorage.setItem("lang", lang);
+  }
+
+  // Fill the case-study attempts list (load + prediction-vs-real detail).
+  function renderCase(dict) {
+    var ul = document.getElementById("case-list");
+    if (!ul) return;
+    ul.innerHTML = "";
+    var items = (dict.case && dict.case.items) || [];
+    items.forEach(function (it) {
+      var li = document.createElement("li");
+      var y = document.createElement("span");
+      y.className = "edu-year";
+      y.textContent = it.year;
+      var l = document.createElement("span");
+      l.className = "edu-label";
+      l.textContent = it.label;
+      li.appendChild(y);
+      li.appendChild(l);
+      ul.appendChild(li);
+    });
   }
 
   // Build the publications timeline; hide the whole section until we have items.

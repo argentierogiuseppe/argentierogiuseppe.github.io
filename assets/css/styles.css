@@ -165,6 +165,10 @@ a { color: inherit; }
 
 .books-intro { color: #e9e9ec; margin: 0 0 1.3rem; }
 
+/* Case-study tagline */
+.case-tagline { margin: 1.6rem 0 0; font-size: 1.12rem; font-weight: 700; font-style: italic; color: var(--accent); }
+#case-list { margin-top: 1.4rem; }
+
 /* Inline highlight link */
 .hl-link { color: var(--accent); text-decoration: none; font-weight: 700; white-space: nowrap; }
 .hl-link:hover { text-decoration: underline; }
