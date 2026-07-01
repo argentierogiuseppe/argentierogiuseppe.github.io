@@ -60,7 +60,28 @@
 
     renderPublications(dict);
     renderCase(dict);
+    renderGallery(dict);
     localStorage.setItem("lang", lang);
+  }
+
+  // Build the case-study photo gallery from content (src + localized caption).
+  function renderGallery(dict) {
+    var wrap = document.getElementById("case-gallery");
+    if (!wrap) return;
+    wrap.innerHTML = "";
+    var photos = (dict.case && dict.case.photos) || [];
+    photos.forEach(function (p) {
+      var fig = document.createElement("figure");
+      var img = document.createElement("img");
+      img.src = p.src;
+      img.alt = p.cap;
+      img.loading = "lazy";
+      var cap = document.createElement("figcaption");
+      cap.textContent = p.cap;
+      fig.appendChild(img);
+      fig.appendChild(cap);
+      wrap.appendChild(fig);
+    });
   }
 
   // Fill the case-study attempts list (load + prediction-vs-real detail).
