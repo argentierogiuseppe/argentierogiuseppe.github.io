@@ -1,6 +1,6 @@
 /*
  * SINGLE SOURCE OF CONTENT, both locales. Italian (it) is primary; English (en)
- * mirrors it. Editing this file is how the site grows — small, reviewable diffs.
+ * mirrors it. Editing this file is how the site grows, in small reviewable diffs.
  * Keep the two locales structurally identical (same keys).
  *
  * Placeholder phase: we have little personal material yet (no CV, no photo).
@@ -19,7 +19,7 @@ window.SITE_CONTENT = {
 
   it: {
     seo: {
-      title: "Giuseppe Argentiero — Forza Massima Relativa",
+      title: "Giuseppe Argentiero · Forza Massima Relativa",
       description:
         "Giuseppe Argentiero: studio e misura della forza massima. Autore del metodo della «Forza Massima Relativa» per la stima dell'1RM dal tempo e dallo spazio del movimento.",
     },
@@ -100,7 +100,7 @@ window.SITE_CONTENT = {
 
   en: {
     seo: {
-      title: "Giuseppe Argentiero — Relative Maximum Strength",
+      title: "Giuseppe Argentiero · Relative Maximum Strength",
       description:
         "Giuseppe Argentiero: the study and measurement of maximum strength. Author of the «Forza Massima Relativa» method for estimating 1RM from the time and space of the movement.",
     },
