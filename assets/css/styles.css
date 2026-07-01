@@ -1,5 +1,5 @@
-/* Giuseppe Argentiero — one-page site.
-   Dark "strength science" theme + azure accent (#4d8dff). System fonts (no external calls). */
+/* Giuseppe Argentiero, one-page site.
+   Dark "strength science" theme, azure accent (#4d8dff). System fonts (no external calls). */
 
 :root {
   --bg: #0d0d0f;
@@ -89,7 +89,7 @@ a { color: inherit; }
   margin: 0 0 1rem;
 }
 .hero-name {
-  /* NOTE: not uppercase — the name must read "Giuseppe Argentiero". */
+  /* NOTE: not uppercase, the name must read "Giuseppe Argentiero". */
   font-size: clamp(2.4rem, 8vw, 5rem);
   line-height: 1.04;
   letter-spacing: -0.02em;
