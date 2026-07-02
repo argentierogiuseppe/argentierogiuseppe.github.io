@@ -59,7 +59,7 @@
     });
 
     renderPublications(dict);
-    renderCase(dict);
+    renderArticle(dict);
     renderGallery(dict);
     localStorage.setItem("lang", lang);
   }
@@ -84,23 +84,57 @@
     });
   }
 
-  // Fill the case-study attempts list (load + prediction-vs-real detail).
-  function renderCase(dict) {
-    var ul = document.getElementById("case-list");
-    if (!ul) return;
-    ul.innerHTML = "";
-    var items = (dict.case && dict.case.items) || [];
-    items.forEach(function (it) {
-      var li = document.createElement("li");
-      var y = document.createElement("span");
-      y.className = "edu-year";
-      y.textContent = it.year;
-      var l = document.createElement("span");
-      l.className = "edu-label";
-      l.textContent = it.label;
-      li.appendChild(y);
-      li.appendChild(l);
-      ul.appendChild(li);
+  // Build Giuseppe's verbatim case report from a blocks model:
+  // { h }, { p }, { ul: [...] }, { table: { head: [...], rows: [[...]] } }.
+  function renderArticle(dict) {
+    var wrap = document.getElementById("case-article");
+    if (!wrap) return;
+    wrap.innerHTML = "";
+    var blocks = (dict.case && dict.case.article) || [];
+    blocks.forEach(function (b) {
+      if (b.h != null) {
+        var h = document.createElement("h3");
+        h.className = "case-h";
+        h.textContent = b.h;
+        wrap.appendChild(h);
+      } else if (b.p != null) {
+        var p = document.createElement("p");
+        p.textContent = b.p;
+        wrap.appendChild(p);
+      } else if (b.ul) {
+        var ul = document.createElement("ul");
+        ul.className = "case-ul";
+        b.ul.forEach(function (t) {
+          var li = document.createElement("li");
+          li.textContent = t;
+          ul.appendChild(li);
+        });
+        wrap.appendChild(ul);
+      } else if (b.table) {
+        var tbl = document.createElement("table");
+        tbl.className = "case-table";
+        var thead = document.createElement("thead");
+        var htr = document.createElement("tr");
+        (b.table.head || []).forEach(function (c) {
+          var th = document.createElement("th");
+          th.textContent = c;
+          htr.appendChild(th);
+        });
+        thead.appendChild(htr);
+        tbl.appendChild(thead);
+        var tb = document.createElement("tbody");
+        (b.table.rows || []).forEach(function (row) {
+          var tr = document.createElement("tr");
+          row.forEach(function (c) {
+            var td = document.createElement("td");
+            td.textContent = c;
+            tr.appendChild(td);
+          });
+          tb.appendChild(tr);
+        });
+        tbl.appendChild(tb);
+        wrap.appendChild(tbl);
+      }
     });
   }
 

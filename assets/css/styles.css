@@ -165,11 +165,19 @@ a { color: inherit; }
 
 .books-intro { color: #e9e9ec; margin: 0 0 1.3rem; }
 
-/* Case-study headings, tagline, gallery */
-.case-h { font-size: 1.15rem; font-weight: 800; margin: 1.9rem 0 0.4rem; color: var(--fg); }
-.case-tagline { margin: 1.9rem 0 0; font-size: 1.12rem; font-weight: 700; font-style: italic; color: var(--accent); }
-#case-list { margin-top: 0.6rem; }
-.case-gallery { margin: 1.9rem 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 0.9rem; }
+/* Case-study (Giuseppe's verbatim report) */
+.case-subtitle { color: var(--muted); font-size: 1.05rem; margin: 0 0 1.6rem; max-width: 760px; }
+.case-article { max-width: 760px; }
+.case-article p { margin: 0 0 1rem; color: #e9e9ec; }
+.case-h { font-size: 1.02rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; margin: 2rem 0 0.7rem; color: var(--accent); }
+.case-ul { margin: 0 0 1rem; padding-left: 1.3rem; color: #e9e9ec; }
+.case-ul li { margin: 0.25rem 0; }
+.case-table { border-collapse: collapse; width: 100%; max-width: 640px; margin: 0.3rem 0 1.5rem; font-size: 0.95rem; }
+.case-table th, .case-table td { text-align: left; padding: 0.5rem 0.85rem; border-bottom: 1px solid var(--line); }
+.case-table thead th { color: var(--accent); font-weight: 800; border-bottom: 2px solid var(--line); }
+.case-table td { color: #e9e9ec; }
+.case-table tbody tr:last-child td { border-bottom: none; }
+.case-gallery { margin: 2rem 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 0.9rem; }
 .case-gallery figure { margin: 0; }
 .case-gallery img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 12px; border: 1px solid var(--line); background: #000; }
 .case-gallery figcaption { color: var(--muted); font-size: 0.82rem; margin-top: 0.4rem; }
