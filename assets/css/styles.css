@@ -183,6 +183,29 @@ a { color: inherit; }
 .case-gallery figcaption { color: var(--muted); font-size: 0.82rem; margin-top: 0.4rem; }
 .case-photonote { color: var(--muted); font-size: 0.85rem; font-style: italic; margin: 0.9rem 0 0; }
 
+/* Placeholder slot for a table or chart Giuseppe has not sent yet. */
+.case-figure {
+  max-width: 640px;
+  margin: 0.3rem 0 1.5rem;
+  padding: 1.1rem 1rem;
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Pull quote (a standalone statement, verbatim) */
+.pullquote {
+  max-width: 760px;
+  margin: 0 0 2rem;
+  padding: 0 0 0 1.1rem;
+  border-left: 3px solid var(--accent);
+  color: #e9e9ec;
+  font-size: 1.05rem;
+  font-style: italic;
+}
+
 /* Inline highlight link */
 .hl-link { color: var(--accent); text-decoration: none; font-weight: 700; white-space: nowrap; }
 .hl-link:hover { text-decoration: underline; }

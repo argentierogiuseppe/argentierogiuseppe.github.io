@@ -59,7 +59,8 @@
     });
 
     renderPublications(dict);
-    renderArticle(dict);
+    renderArticle("case-article", dict.case);
+    renderArticle("research-article", dict.research);
     renderGallery(dict);
     localStorage.setItem("lang", lang);
   }
@@ -84,13 +85,14 @@
     });
   }
 
-  // Build Giuseppe's verbatim case report from a blocks model:
-  // { h }, { p }, { ul: [...] }, { table: { head: [...], rows: [[...]] } }.
-  function renderArticle(dict) {
-    var wrap = document.getElementById("case-article");
+  // Build one of Giuseppe's verbatim texts from a blocks model:
+  // { h }, { p }, { ul: [...] }, { table: { head: [...], rows: [[...]] } },
+  // { figure } (a slot for a table or chart he has not sent yet).
+  function renderArticle(targetId, section) {
+    var wrap = document.getElementById(targetId);
     if (!wrap) return;
     wrap.innerHTML = "";
-    var blocks = (dict.case && dict.case.article) || [];
+    var blocks = (section && section.article) || [];
     blocks.forEach(function (b) {
       if (b.h != null) {
         var h = document.createElement("h3");
@@ -110,6 +112,11 @@
           ul.appendChild(li);
         });
         wrap.appendChild(ul);
+      } else if (b.figure != null) {
+        var fg = document.createElement("div");
+        fg.className = "case-figure";
+        fg.textContent = b.figure;
+        wrap.appendChild(fg);
       } else if (b.table) {
         var tbl = document.createElement("table");
         tbl.className = "case-table";
