@@ -55,6 +55,24 @@ a { color: inherit; }
   border-radius: 8px;
   padding: 0.1rem 0.45rem;
 }
+.nav-links { display: flex; align-items: center; gap: clamp(0.8rem, 2.4vw, 1.7rem); }
+.nav-links a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: color 0.15s ease;
+}
+.nav-links a:hover { color: var(--fg); }
+
+/* Under ~700px the links drop to their own centered row, so nothing squeezes. */
+@media (max-width: 700px) {
+  .nav { flex-wrap: wrap; row-gap: 0.55rem; }
+  .nav-links { order: 3; width: 100%; justify-content: center; border-top: 1px solid var(--line); padding-top: 0.55rem; }
+  .nav-links a { font-size: 0.82rem; }
+}
+
 .lang { display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; }
 .lang button { background: none; border: none; color: var(--muted); cursor: pointer; font: inherit; padding: 0.2rem 0.1rem; transition: color 0.15s ease; }
 .lang button:hover { color: var(--fg); }
@@ -169,6 +187,51 @@ a { color: inherit; }
 .chip-list li { background: var(--bg); border: 1px solid var(--line); border-radius: 999px; padding: 0.5rem 1.1rem; font-weight: 600; font-size: 0.95rem; }
 
 .books-intro { color: #e9e9ec; margin: 0 0 1.3rem; }
+
+/* Article index (home): one card per article, summary + link to the full text */
+/* Cards stretch to the tallest one, so every "read the article" link lines up. */
+/* min() keeps the single column from overflowing viewports narrower than 310px. */
+.art-list { display: grid; gap: 1.1rem; grid-template-columns: repeat(auto-fit, minmax(min(310px, 100%), 1fr)); }
+.art-card {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.art-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.art-card .kicker { margin: 0; }
+.art-card-title { font-size: 1.22rem; line-height: 1.25; font-weight: 800; margin: 0; letter-spacing: -0.01em; }
+.art-card-meta { margin: 0; color: var(--muted); font-size: 0.86rem; }
+.art-card-summary { margin: 0.35rem 0 0; color: #e9e9ec; font-size: 1rem; }
+.art-card-link {
+  margin-top: auto;
+  padding-top: 0.7rem;
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.art-card-link::after { content: " \2192"; }
+.art-card-link:hover { text-decoration: underline; }
+
+/* Article page (one of Giuseppe's texts, in full) */
+.article-page { max-width: none; }
+.article-page .section-title { max-width: 760px; font-size: clamp(1.5rem, 3.4vw, 2.1rem); }
+.back-link {
+  display: inline-block;
+  margin: 0 0 1.4rem;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+.back-link::before { content: "\2190  "; }
+.back-link:hover { color: var(--accent); }
+.article-foot { margin: 2.6rem 0 0; padding-top: 1.6rem; border-top: 1px solid var(--line); max-width: 760px; }
 
 /* Case-study (Giuseppe's verbatim report) */
 .case-subtitle { color: var(--muted); font-size: 1.05rem; margin: 0 0 1.6rem; max-width: 760px; }

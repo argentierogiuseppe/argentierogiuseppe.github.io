@@ -20,11 +20,17 @@
     <meta property="og:title" content="Giuseppe Argentiero" />
     <meta property="og:description" content="" data-i18n-meta="seo.description" />
 
-    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css?v=20260803" />
   </head>
   <body>
     <header class="nav">
       <a class="brand" href="#top" aria-label="Giuseppe Argentiero">GA</a>
+      <nav class="nav-links" id="menu">
+        <a href="#about" data-i18n="nav.about"></a>
+        <a href="#method" data-i18n="nav.method"></a>
+        <a href="#articles" data-i18n="nav.articles"></a>
+        <a href="#contact" data-i18n="nav.contact"></a>
+      </nav>
       <nav class="lang" aria-label="Language switch">
         <button type="button" data-lang="it">IT</button>
         <span class="lang-sep" aria-hidden="true">/</span>
@@ -71,28 +77,16 @@
         <a class="btn btn-ghost" data-link="blog" data-i18n="method.cta" href="#" target="_blank" rel="noopener noreferrer"></a>
       </section>
 
-      <!-- CASE STUDY (Giuseppe's verbatim case report, rendered from content.js) -->
-      <section class="section" id="case">
-        <p class="kicker" data-i18n="case.kicker"></p>
-        <h2 class="section-title" data-i18n="case.title"></h2>
-        <p class="case-subtitle" data-i18n="case.subtitle"></p>
-        <div class="case-article" id="case-article"></div>
-        <div class="case-gallery" id="case-gallery"></div>
-        <p class="case-photonote" data-i18n="case.photoNote"></p>
-      </section>
-
-      <!-- RESEARCH (Giuseppe's verbatim paper, rendered from content.js) -->
-      <section class="section section-alt" id="research">
-        <p class="kicker" data-i18n="research.kicker"></p>
-        <h2 class="section-title" data-i18n="research.title"></h2>
-        <p class="case-subtitle" data-i18n="research.subtitle"></p>
-        <blockquote class="pullquote" data-i18n="research.quote"></blockquote>
-        <div class="case-article" id="research-article"></div>
-        <p class="case-photonote" data-i18n="research.figureNote"></p>
+      <!-- ARTICLES (index only: the full texts live on their own pages) -->
+      <section class="section" id="articles">
+        <p class="kicker" data-i18n="articles.kicker"></p>
+        <h2 class="section-title" data-i18n="articles.title"></h2>
+        <p class="books-intro" data-i18n="articles.intro"></p>
+        <div class="art-list" id="articles-list"></div>
       </section>
 
       <!-- PUBLICATIONS (hidden until items exist) -->
-      <section class="section" id="publications">
+      <section class="section section-alt" id="publications">
         <p class="kicker" data-i18n="publications.kicker"></p>
         <h2 class="section-title" data-i18n="publications.title"></h2>
         <p class="books-intro" data-i18n="publications.intro"></p>
@@ -121,7 +115,9 @@
       <span class="footer-copy">© <span id="year"></span> Giuseppe Argentiero</span>
     </footer>
 
-    <script src="./assets/js/content.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <!-- ?v= busts the 10-minute GitHub Pages cache: bump it (all pages) on every
+         deploy that touches content.js, main.js or styles.css. -->
+    <script src="./assets/js/content.js?v=20260803"></script>
+    <script src="./assets/js/main.js?v=20260803"></script>
   </body>
 </html>

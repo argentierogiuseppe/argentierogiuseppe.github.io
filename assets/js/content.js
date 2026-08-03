@@ -23,7 +23,13 @@ window.SITE_CONTENT = {
       description:
         "Giuseppe Argentiero: studio e misura della forza massima. Autore del metodo della «Forza Massima Relativa» per la stima dell'1RM dal tempo e dallo spazio del movimento.",
     },
-    nav: { langLabel: "Lingua" },
+    nav: {
+      langLabel: "Lingua",
+      about: "Chi sono",
+      method: "Il metodo",
+      articles: "Articoli",
+      contact: "Contatti",
+    },
     hero: {
       headline: "La forza non si stima.\nSi misura nel tempo e nello spazio.",
       name: "Giuseppe Argentiero",
@@ -44,6 +50,44 @@ window.SITE_CONTENT = {
       p1: "La forza massima (1RM) si può stimare in modo affidabile da una singola ripetizione a carichi ≥ 80% del massimale, misurando il tempo della fase concentrica e lo spazio, cioè la distanza verticale percorsa dal carico.",
       p2: "Tempo e spazio sono parametri relativi, legati alla FMCP, la Forza Massima Concentrica Potenziale: «il tempo e lo spazio hanno valori equivalenti, si influenzano a vicenda», indipendentemente dall'esercizio.",
       cta: "Approfondisci sul blog",
+    },
+
+    /*
+     * Article index. Each item points, via `source`, to the section below that
+     * holds Giuseppe's verbatim text: that text is published in full on its own
+     * page (`/<slug>/`), never on the home. `cardTitle` and `summary` are the
+     * ONLY editorial strings on this site: they are the site's own presentation
+     * of the article, not Giuseppe's words, and they must never be shown as if
+     * they were his. His title, subtitle and body stay untouched on the page.
+     */
+    articles: {
+      kicker: "Articoli",
+      title: "Studi e casi pratici",
+      intro:
+        "Il lavoro in forma estesa. Ogni articolo si apre in una pagina dedicata, con il testo integrale.",
+      readMore: "Leggi l'articolo",
+      backHome: "Torna alla home",
+      backList: "Tutti gli articoli",
+      items: [
+        {
+          slug: "caso-fipe",
+          source: "case",
+          kicker: "Caso pratico",
+          cardTitle: "Il warm-up come strumento decisionale in gara",
+          meta: "Coppa Italia FIPE di Bench Press, 24 maggio 2026",
+          summary:
+            "Alla Coppa Italia FIPE di Bench Press del 24 maggio 2026, a Mesagne, il modello FMCP è stato applicato in gara e in tempo reale. I dati del riscaldamento non sono serviti soltanto a scegliere il carico di apertura: hanno permesso di costruire in anticipo la strategia delle prime due prove, in una competizione dove tra un'alzata e l'altra non c'è il tempo materiale per rifare le analisi. Il tempo previsto per la prima prova a 87,5 kg si è discostato di 15 millesimi di secondo da quello reale, e il modello aveva già indicato dove si trovava il limite funzionale dell'atleta.",
+        },
+        {
+          slug: "ricerca-1rm",
+          source: "research",
+          kicker: "Ricerca",
+          cardTitle: "1RM, tempo e spazio nelle distensioni su panca piana",
+          meta: "Studio su 64 atleti misurati in competizione FIPE",
+          summary:
+            "La domanda dello studio è se il massimale possa essere determinato senza eseguire un test massimale: misurando il tempo della fase concentrica e la distanza verticale percorsa dal bilanciere in una singola ripetizione, a un carico pari o superiore all'80% dell'1RM. I dati vengono da 64 atleti misurati in competizione FIPE, più un secondo gruppo sottoposto al test diretto. La conclusione è che tempo e spazio sono legati in modo stabile alla forza massima concentrica potenziale, mentre la sola velocità media non basta a definire l'intensità relativa.",
+        },
+      ],
     },
     case: {
       kicker: "Caso pratico",
@@ -276,7 +320,13 @@ window.SITE_CONTENT = {
       description:
         "Giuseppe Argentiero: the study and measurement of maximum strength. Author of the «Forza Massima Relativa» method for estimating 1RM from the time and space of the movement.",
     },
-    nav: { langLabel: "Language" },
+    nav: {
+      langLabel: "Language",
+      about: "About",
+      method: "The method",
+      articles: "Articles",
+      contact: "Contact",
+    },
     hero: {
       headline: "Strength is not estimated.\nIt is measured in time and space.",
       name: "Giuseppe Argentiero",
@@ -297,6 +347,38 @@ window.SITE_CONTENT = {
       p1: "Maximum strength (1RM) can be reliably estimated from a single repetition at loads ≥ 80% of the max, by measuring the time of the concentric phase and the space, that is the vertical distance the load travels.",
       p2: "Time and space are relative parameters tied to FMCP, the potential maximum concentric force: «time and space have equivalent values, they influence each other», independent of the specific exercise.",
       cta: "Read more on the blog",
+    },
+
+    // Article index. See the note on the Italian block above: `cardTitle` and
+    // `summary` are editorial, everything else is Giuseppe's.
+    articles: {
+      kicker: "Articles",
+      title: "Studies and field cases",
+      intro:
+        "The work at full length. Each article opens on its own page, with the complete text.",
+      readMore: "Read the article",
+      backHome: "Back to the home page",
+      backList: "All articles",
+      items: [
+        {
+          slug: "caso-fipe",
+          source: "case",
+          kicker: "Field case",
+          cardTitle: "The warm-up as a decision-making tool in competition",
+          meta: "FIPE Bench Press Coppa Italia, 24 May 2026",
+          summary:
+            "At the FIPE Bench Press Coppa Italia of 24 May 2026, in Mesagne, the FMCP model was applied during the competition itself, in real time. The warm-up data did not only serve to pick the opening load: they made it possible to build the strategy of the first two attempts in advance, in a competition where there is no time between lifts to run the analysis again. The time predicted for the first attempt at 87.5 kg was 15 thousandths of a second away from the real one, and the model had already shown where the athlete's functional limit lay.",
+        },
+        {
+          slug: "ricerca-1rm",
+          source: "research",
+          kicker: "Research",
+          cardTitle: "1RM, time and space in the bench press",
+          meta: "A study on 64 athletes measured in FIPE competition",
+          summary:
+            "The question behind this study is whether the maximum can be determined without performing a maximal test: by measuring the time of the concentric phase and the vertical distance travelled by the barbell in a single repetition, at a load equal to or above 80% of 1RM. The data come from 64 athletes measured in FIPE competition, plus a second group put through the direct test. The conclusion is that time and space are tied to the potential maximum concentric force in a stable way, whereas mean velocity alone is not enough to define relative intensity.",
+        },
+      ],
     },
     case: {
       kicker: "Case study",

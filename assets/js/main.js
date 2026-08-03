@@ -6,6 +6,9 @@
  *       and honors ?lang=.
  * Lists: the "publications" list is built from content.js and hides itself when
  *        empty (so a placeholder section never shows an empty box).
+ * Pages: the home renders the article index as cards; an article page carries
+ *        `data-article="<slug>"` on <body> and renders that one article in full,
+ *        plus `data-base="../"` so image paths stay relative to the site root.
  */
 (function () {
   "use strict";
@@ -15,6 +18,23 @@
 
   var SUPPORTED = C.meta.languages;
   var DEFAULT = C.meta.defaultLang;
+
+  // "" on the home, "../" on an article page: content.js stores asset paths as
+  // "./assets/...", which only resolves from the site root.
+  var BASE = document.body.getAttribute("data-base") || "";
+  var ARTICLE_SLUG = document.body.getAttribute("data-article");
+
+  function assetUrl(src) {
+    return BASE ? BASE + String(src).replace(/^\.\//, "") : src;
+  }
+
+  function findArticle(dict, slug) {
+    var items = (dict.articles && dict.articles.items) || [];
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].slug === slug) return items[i];
+    }
+    return null;
+  }
 
   function resolve(obj, path) {
     return path.split(".").reduce(function (acc, key) {
@@ -59,22 +79,19 @@
     });
 
     renderPublications(dict);
-    renderArticle("case-article", dict.case);
-    renderArticle("research-article", dict.research);
-    renderGallery(dict);
+    renderArticleCards(dict);
+    renderArticlePage(dict);
     localStorage.setItem("lang", lang);
   }
 
-  // Build the case-study photo gallery from content (src + localized caption).
-  function renderGallery(dict) {
-    var wrap = document.getElementById("case-gallery");
+  // Build a photo gallery from content (src + localized caption).
+  function renderGallery(wrap, photos) {
     if (!wrap) return;
     wrap.innerHTML = "";
-    var photos = (dict.case && dict.case.photos) || [];
-    photos.forEach(function (p) {
+    (photos || []).forEach(function (p) {
       var fig = document.createElement("figure");
       var img = document.createElement("img");
-      img.src = p.src;
+      img.src = assetUrl(p.src);
       img.alt = p.cap;
       img.loading = "lazy";
       var cap = document.createElement("figcaption");
@@ -83,6 +100,79 @@
       fig.appendChild(cap);
       wrap.appendChild(fig);
     });
+  }
+
+  // Home: one card per article (editorial summary + link to the full text).
+  function renderArticleCards(dict) {
+    var wrap = document.getElementById("articles-list");
+    if (!wrap) return;
+    wrap.innerHTML = "";
+    var idx = dict.articles || {};
+    (idx.items || []).forEach(function (it) {
+      var card = document.createElement("article");
+      card.className = "art-card";
+
+      var kicker = document.createElement("p");
+      kicker.className = "kicker";
+      kicker.textContent = it.kicker;
+
+      var title = document.createElement("h3");
+      title.className = "art-card-title";
+      title.textContent = it.cardTitle;
+
+      var meta = document.createElement("p");
+      meta.className = "art-card-meta";
+      meta.textContent = it.meta;
+
+      var summary = document.createElement("p");
+      summary.className = "art-card-summary";
+      summary.textContent = it.summary;
+
+      var link = document.createElement("a");
+      link.className = "art-card-link";
+      link.href = BASE + it.slug + "/";
+      link.textContent = idx.readMore;
+
+      card.appendChild(kicker);
+      card.appendChild(title);
+      card.appendChild(meta);
+      card.appendChild(summary);
+      card.appendChild(link);
+      wrap.appendChild(card);
+    });
+  }
+
+  // Article page: Giuseppe's text in full, exactly as stored.
+  function renderArticlePage(dict) {
+    if (!ARTICLE_SLUG) return;
+    var item = findArticle(dict, ARTICLE_SLUG);
+    if (!item) return;
+    var section = dict[item.source] || {};
+
+    setText("article-kicker", item.kicker);
+    setText("article-title", section.title);
+    setText("article-subtitle", section.subtitle);
+
+    var quote = document.getElementById("article-quote");
+    if (quote) {
+      quote.textContent = section.quote || "";
+      quote.hidden = !section.quote;
+    }
+
+    renderArticle("article-body", section);
+    renderGallery(document.getElementById("article-gallery"), section.photos);
+    setText("article-note", section.photoNote || section.figureNote || "");
+
+    // The article's own title wins over the site-wide one.
+    document.title = item.cardTitle + " · Giuseppe Argentiero";
+    document.querySelectorAll("[data-i18n-meta='seo.description']").forEach(function (el) {
+      el.setAttribute("content", item.summary);
+    });
+  }
+
+  function setText(id, value) {
+    var el = document.getElementById(id);
+    if (el) el.textContent = value || "";
   }
 
   // Build one of Giuseppe's verbatim texts from a blocks model:
