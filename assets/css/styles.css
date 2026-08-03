@@ -80,24 +80,29 @@ a { color: inherit; }
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-.eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 0.22em;
-  font-size: 0.74rem;
-  font-weight: 700;
-  color: var(--accent);
-  margin: 0 0 1rem;
-}
-.hero-name {
-  /* NOTE: not uppercase, the name must read "Giuseppe Argentiero". */
-  font-size: clamp(2.4rem, 8vw, 5rem);
-  line-height: 1.04;
+.hero-headline {
+  /* Two lines, the break comes from the "\n" in content.js. */
+  white-space: pre-line;
+  font-size: clamp(2rem, 6.4vw, 4.2rem);
+  line-height: 1.06;
   letter-spacing: -0.02em;
   font-weight: 800;
   margin: 0;
+  text-wrap: balance;
 }
-.hero-tagline { font-size: clamp(1.1rem, 2.6vw, 1.5rem); margin: 1rem 0 0; }
-.hero-intro { color: var(--muted); max-width: 52ch; margin: 1.1rem auto 0; }
+.hero-name {
+  /* NOTE: not uppercase, the name must read "Giuseppe Argentiero". */
+  font-size: clamp(1.15rem, 2.8vw, 1.6rem);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  margin: 1.5rem 0 0;
+}
+.hero-subheadline {
+  color: var(--muted);
+  max-width: 46rem;
+  margin: 0.6rem auto 0;
+  text-wrap: balance;
+}
 
 /* ---- Buttons ---- */
 .cta-row { margin-top: 2rem; display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; }

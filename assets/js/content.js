@@ -25,11 +25,9 @@ window.SITE_CONTENT = {
     },
     nav: { langLabel: "Lingua" },
     hero: {
-      eyebrow: "Scienza della forza · Ricerca",
+      headline: "La forza non si stima.\nSi misura nel tempo e nello spazio.",
       name: "Giuseppe Argentiero",
-      tagline: "Lo studio e la misura della forza massima.",
-      intro:
-        "Studio la forza e come misurarla. Ideatore del metodo FMCP e della «Forza Massima Relativa»: stimo l'1RM da una sola ripetizione, leggendo il tempo e lo spazio del movimento.",
+      subheadline: "Ricercatore indipendente · Ideatore del metodo FMCP e del sistema Bodygon",
       ctaBlog: "Il blog",
       ctaContact: "Contatti",
     },
@@ -280,11 +278,9 @@ window.SITE_CONTENT = {
     },
     nav: { langLabel: "Language" },
     hero: {
-      eyebrow: "Strength science · Research",
+      headline: "Strength is not estimated.\nIt is measured in time and space.",
       name: "Giuseppe Argentiero",
-      tagline: "The study and measurement of maximum strength.",
-      intro:
-        "I study strength and how to measure it. Creator of the FMCP method and of «Forza Massima Relativa»: I estimate 1RM from a single repetition by reading the time and the space of the movement.",
+      subheadline: "Independent researcher · Creator of the FMCP method and of the Bodygon system",
       ctaBlog: "The blog",
       ctaContact: "Contact",
     },
