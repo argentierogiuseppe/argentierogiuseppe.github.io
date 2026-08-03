@@ -8,7 +8,7 @@
  * ../../AGENTS.md section 6 and ../../memory/architecture.md.
  */
 window.SITE_CONTENT = {
-  meta: { defaultLang: "it", languages: ["it", "en"], domain: "giuseppeargentiero.github.io" },
+  meta: { defaultLang: "it", languages: ["it", "en"], domain: "argentierogiuseppe.github.io" },
 
   // Locale-independent.
   links: {
