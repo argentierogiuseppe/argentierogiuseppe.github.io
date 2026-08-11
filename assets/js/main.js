@@ -78,10 +78,32 @@
       btn.classList.toggle("is-active", btn.getAttribute("data-lang") === lang);
     });
 
+    renderRuns("about-text", dict.about && dict.about.paras);
     renderPublications(dict);
     renderArticleCards(dict);
     renderArticlePage(dict);
     localStorage.setItem("lang", lang);
+  }
+
+  // Paragraphs made of runs: [[{ t: "plain" }, { b: "bold" }], ...]. Used where
+  // Giuseppe asked for part of a sentence in bold.
+  function renderRuns(targetId, paras) {
+    var wrap = document.getElementById(targetId);
+    if (!wrap) return;
+    wrap.innerHTML = "";
+    (paras || []).forEach(function (runs) {
+      var p = document.createElement("p");
+      runs.forEach(function (r) {
+        if (r.b != null) {
+          var strong = document.createElement("strong");
+          strong.textContent = r.b;
+          p.appendChild(strong);
+        } else {
+          p.appendChild(document.createTextNode(r.t));
+        }
+      });
+      wrap.appendChild(p);
+    });
   }
 
   // Build a photo gallery from content (src + localized caption).

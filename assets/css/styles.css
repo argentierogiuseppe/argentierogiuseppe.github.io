@@ -150,6 +150,7 @@ a { color: inherit; }
 /* Text blocks (about, method) */
 .about-text { max-width: 64ch; }
 .about-text p { margin: 0 0 1rem; color: #e9e9ec; }
+.about-text strong { color: var(--fg); font-weight: 700; }
 .about-note { margin: 0.9rem 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: 0.55rem; font-weight: 700; }
 .hl-logo { display: inline-flex; align-items: center; line-height: 0; transition: transform 0.15s ease; }
 .hl-logo:hover { transform: translateY(-1px); }

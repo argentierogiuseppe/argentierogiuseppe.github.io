@@ -37,11 +37,24 @@ window.SITE_CONTENT = {
       ctaBlog: "Il blog",
       ctaContact: "Contatti",
     },
+    /*
+     * Bio, his own text (bot 2026-08-04, updates 451443829 and 451443830). Each
+     * paragraph is a list of runs: { t } plain, { b } bold. He asked for the
+     * "Nel tempo ho iniziato a osservare..." sentence in bold.
+     */
     about: {
       kicker: "Chi sono",
-      title: "Misurare la forza, non solo allenarla",
-      p1: "Sono Giuseppe Argentiero, ideatore del metodo FMCP e inventore del PerfecTraining, dispositivo poi evoluto in Bodygon. Da anni mi occupo di forza, preparazione atletica e valutazione della prestazione sportiva, con l'obiettivo di rendere l'allenamento più misurabile, pratico e comprensibile.",
-      p2: "Il mio lavoro nasce dall'idea che la forza non sia soltanto una sensazione, ma una grandezza che può essere osservata attraverso tempo, spazio e carico.",
+      title: "Giuseppe Argentiero",
+      paras: [
+        [{ t: "Sono un ricercatore indipendente e ideatore del metodo FMCP (Forza Massima Concentrica Potenziale)." }],
+        [{ t: "La mia ricerca nasce da una curiosità personale. Da atleta, ho sempre cercato di comprendere che cosa determinasse realmente l'espressione della forza e se fosse possibile misurarla in modo diverso rispetto agli approcci tradizionali." }],
+        [
+          { b: "Nel tempo ho iniziato a osservare questo fenomeno da una prospettiva completamente diversa." },
+          { t: " È proprio da questo cambio di prospettiva che è nato il metodo FMCP (Forza Massima Concentrica Potenziale), sviluppato per interpretare e misurare la forza attraverso la relazione tra carico, tempo e spazio del movimento." },
+        ],
+        [{ t: "Da questa ricerca è nato successivamente Bodygon, il sistema sviluppato per applicare nella pratica i principi del metodo FMCP." }],
+        [{ t: "Oggi continuo a portare avanti questa ricerca attraverso lo studio, la sperimentazione e la validazione del metodo, con l'obiettivo di contribuire allo sviluppo di nuovi strumenti per la misurazione della forza." }],
+      ],
       bodygonLink: "Inventore del PerfecTraining, oggi evoluto in",
     },
     method: {
@@ -334,11 +347,20 @@ window.SITE_CONTENT = {
       ctaBlog: "The blog",
       ctaContact: "Contact",
     },
+    // Bio: faithful full translation of his Italian text, same bold run.
     about: {
       kicker: "About",
-      title: "Measuring strength, not just training it",
-      p1: "I am Giuseppe Argentiero, creator of the FMCP method and inventor of PerfecTraining, the device that later evolved into Bodygon. For years I have worked on strength, athletic preparation and the assessment of sports performance, with the goal of making training more measurable, practical and understandable.",
-      p2: "My work stems from the idea that strength is not merely a sensation, but a quantity that can be observed through time, space and load.",
+      title: "Giuseppe Argentiero",
+      paras: [
+        [{ t: "I am an independent researcher and the creator of the FMCP method (Forza Massima Concentrica Potenziale, potential maximum concentric force)." }],
+        [{ t: "My research stems from a personal curiosity. As an athlete, I always tried to understand what really determines the expression of strength, and whether it could be measured in a different way from the traditional approaches." }],
+        [
+          { b: "Over time I began to observe this phenomenon from a completely different perspective." },
+          { t: " It is precisely from this change of perspective that the FMCP method (Forza Massima Concentrica Potenziale) was born, developed to interpret and measure strength through the relationship between load, time and space of the movement." },
+        ],
+        [{ t: "From this research Bodygon was later born, the system developed to apply the principles of the FMCP method in practice." }],
+        [{ t: "Today I keep carrying this research forward through study, experimentation and validation of the method, with the goal of contributing to the development of new tools for the measurement of strength." }],
+      ],
       bodygonLink: "Inventor of PerfecTraining, now evolved into",
     },
     method: {
