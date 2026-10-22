@@ -69,9 +69,15 @@
     });
     if (dict.seo && dict.seo.title) document.title = dict.seo.title;
 
+    // An element whose link is missing from content.js is removed, and so is
+    // whatever is marked as needing that link.
     document.querySelectorAll("[data-link]").forEach(function (el) {
       var href = C.links && C.links[el.getAttribute("data-link")];
       if (href) el.setAttribute("href", href);
+      else el.remove();
+    });
+    document.querySelectorAll("[data-needs-link]").forEach(function (el) {
+      if (!(C.links && C.links[el.getAttribute("data-needs-link")])) el.remove();
     });
 
     document.querySelectorAll(".lang [data-lang]").forEach(function (btn) {

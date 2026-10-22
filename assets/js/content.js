@@ -10,10 +10,11 @@
 window.SITE_CONTENT = {
   meta: { defaultLang: "it", languages: ["it", "en"], domain: "argentierogiuseppe.github.io" },
 
-  // Locale-independent.
+  // Locale-independent. A link left out hides what points at it: the blog
+  // went with its domain, which lapsed and now belongs to someone else
+  // (2026-10-22).
   links: {
-    blog: "https://www.forzamassimarelativa.it/",
-    email: "info@forzamassimarelativa.it",
+    email: "argento977@libero.it",
     bodygon: "https://bodygon.com",
   },
 
@@ -237,7 +238,7 @@ window.SITE_CONTENT = {
         { p: `La valutazione della forza in ambito atletico è indispensabile per una corretta programmazione di lavoro. L'1RM indica il massimo carico che può essere sollevato una sola volta senza alcun aiuto esterno, corrisponde alla forza più elevata che il sistema neuromuscolare può esprimere con contrazione volontaria.` },
         { p: `La forza massima si può definire come la capacità di sviluppare la forza che permette di sollevare un carico massimale che non consente di modulare la velocità di esecuzione (1).` },
         { p: `La forza massimale è la forza più elevata che il sistema neuromuscolare è in grado di esprimere attraverso una contrazione volontaria “senza limitazioni di tempo" (2).` },
-        { p: `L’1RM così come la Fmcp (forza massima concentrica potenziale) è un valore assoluto, che può oscillare ma solo al variare dello stato atletico di un individuo che sostanzialmente nell'immediato è impossibile modificare in termini considerevoli, resta quindi invariante "assoluto" (8). La Fmcp è un valore, al limite delle prestazioni, non raggiungibile sperimentalmente, quando il carico utilizzato aumenta ed è prossimo all'1RM il tempo impiegato della fase concentrica aumenta notevolmente, attraverso il valore della Fmcp sarà possibile stabilire con adeguata precisione l'1RM (Maggiori dettagli su www.forzamassimarelativa.it) .` },
+        { p: `L’1RM così come la Fmcp (forza massima concentrica potenziale) è un valore assoluto, che può oscillare ma solo al variare dello stato atletico di un individuo che sostanzialmente nell'immediato è impossibile modificare in termini considerevoli, resta quindi invariante "assoluto" (8). La Fmcp è un valore, al limite delle prestazioni, non raggiungibile sperimentalmente, quando il carico utilizzato aumenta ed è prossimo all'1RM il tempo impiegato della fase concentrica aumenta notevolmente, attraverso il valore della Fmcp sarà possibile stabilire con adeguata precisione l'1RM.` },
 
         { h: "OBIETTIVI E IPOTESI" },
         { p: `L’obiettivo della ricerca in esame è dimostrare come attraverso l’analisi del tempo e dello spazio della fase concentrica sia possibile determinare la Fmcp, stabilendo di conseguenza l’1RM, nell’esercizio delle distensione su panca piana. Sarà quindi possibile stabilire l’1RM eseguendo un’unica ripetizione utilizzando un carico pari o superiore a circa il 75-80% del 1RM.` },
@@ -290,13 +291,13 @@ window.SITE_CONTENT = {
         { p: `Dai dati evidenziati si evince quindi che, quando la Fmcp aumenta, aumenterà anche la velocità media esercitata nell’utilizzo di carichi submassimali, di conseguenza quando la Fmcp aumenta, il tempo impiegato nel sollevare una determinata intensità del 1RM diminuirà progressivamente.` },
 
         { h: "DISCUSSIONE" },
-        { p: `I risultati ottenuti confermano una inestricabile relazione tra il tempo della fase concentrica, la distanza verticale percorsa dal bilanciere della stessa fase e la Fmcp nell’esercizio delle distensione su panca piana, questo ci permette di monitorare e prescrivere il carico d'allenamento senza la necessità di eseguire il test diretto dell'1RM o quello indiretto, minimizzando così il rischio di infortuni. Sarà sufficiente eseguire un'unica ripetizione, esprimendosi al massimo delle proprie capacità, utilizzando un carico pari o superiore al proprio 80% di 1RM (Maggiori dettagli su www.forzamassimarelativa.it) .` },
+        { p: `I risultati ottenuti confermano una inestricabile relazione tra il tempo della fase concentrica, la distanza verticale percorsa dal bilanciere della stessa fase e la Fmcp nell’esercizio delle distensione su panca piana, questo ci permette di monitorare e prescrivere il carico d'allenamento senza la necessità di eseguire il test diretto dell'1RM o quello indiretto, minimizzando così il rischio di infortuni. Sarà sufficiente eseguire un'unica ripetizione, esprimendosi al massimo delle proprie capacità, utilizzando un carico pari o superiore al proprio 80% di 1RM.` },
 
         { h: "BIBLIOGRAFIA" },
         { ul: [`Bosco Carmelo., “La forza muscolare, aspetti fisiologici ed applicazioni pratiche” - SSS, Roma 1997`, `d’Ambrosio Emanuele., “La forza e le sue espressioni nel pugilato dilettantistico” - Tesi di laurea di scienze motorie, università degli studi di Urbino “Carlo Bo”, 2009`, `Sanchez-Medina L et al. Importance of the Propulsive Phase in Strength Assessment - Int J Sports Med 2010; 31: 123 - 129`, `Vittori Carlo., “L’allenamento delle specialità di corsa veloce per gli atleti d’elite” CSR, Roma 2004.`, `Vittori Carlo., “Nervi e cuore saldi, l’allenamento del velocista nelle sue componenti motivazionali e biologiche” - Calzetti e Mariucci editori, Perugia 2014`, `Wilmore Jack H., Costill David L. - “Fisiologia dell’esercizio fisico e dello sport” - Calzetti e Mariucci editori, Perugia 2005`, `Zatsiorsky Vladimir M., Kraemer William J. - “Scienza e pratica dell’allenamento della forza” - Calzetti e Mariucci editori, Perugia 2008`] },
 
         { h: "SITOGRAFIA" },
-        { ul: [`Argentiero Giuseppe - La relatività della forza massima www.forzamassimarelativa.it`] },
+        { ul: [`Argentiero Giuseppe - La relatività della forza massima`] },
 
         { h: "RINGRAZIAMENTI" },
         { p: `L'autore ringrazia il comitato regionale FIPE Puglia e la palestra LIFE CORE FIT CENTER di Andrea Balestra viale Belgio 19 Francavilla Fontana.` },
@@ -537,7 +538,7 @@ window.SITE_CONTENT = {
         { p: `Assessing strength in the athletic field is indispensable for correct work programming. The 1RM indicates the maximum load that can be lifted only once without any external help, it corresponds to the highest force the neuromuscular system can express with a voluntary contraction.` },
         { p: `Maximum strength can be defined as the capacity to develop the force that allows a maximal load to be lifted, a load that does not allow the speed of execution to be modulated (1).` },
         { p: `Maximal strength is the highest force the neuromuscular system is able to express through a voluntary contraction “without limitations of time" (2).` },
-        { p: `The 1RM, like the Fmcp (potential maximum concentric force), is an absolute value, which can fluctuate but only as the athletic condition of an individual changes, something that in the immediate term is essentially impossible to modify to any considerable extent, so it remains an "absolute" invariant (8). The Fmcp is a value at the limit of performance, not reachable experimentally: when the load used increases and is close to the 1RM, the time taken by the concentric phase increases considerably; through the value of the Fmcp it will be possible to establish the 1RM with adequate precision (more details at www.forzamassimarelativa.it).` },
+        { p: `The 1RM, like the Fmcp (potential maximum concentric force), is an absolute value, which can fluctuate but only as the athletic condition of an individual changes, something that in the immediate term is essentially impossible to modify to any considerable extent, so it remains an "absolute" invariant (8). The Fmcp is a value at the limit of performance, not reachable experimentally: when the load used increases and is close to the 1RM, the time taken by the concentric phase increases considerably; through the value of the Fmcp it will be possible to establish the 1RM with adequate precision.` },
 
         { h: "OBJECTIVES AND HYPOTHESIS" },
         { p: `The objective of this research is to demonstrate how, through the analysis of the time and the space of the concentric phase, it is possible to determine the Fmcp, and consequently to establish the 1RM, in the flat bench press. It will therefore be possible to establish the 1RM by performing a single repetition using a load equal to or greater than about 75-80% of the 1RM.` },
@@ -590,13 +591,13 @@ window.SITE_CONTENT = {
         { p: `From the highlighted data it can therefore be deduced that when the Fmcp increases, the mean velocity exerted when using submaximal loads will also increase; consequently, when the Fmcp increases, the time taken to lift a given intensity of the 1RM will progressively decrease.` },
 
         { h: "DISCUSSION" },
-        { p: `The results obtained confirm an inextricable relationship between the time of the concentric phase, the vertical distance travelled by the barbell in that same phase and the Fmcp in the flat bench press; this allows us to monitor and prescribe the training load without the need to perform the direct 1RM test or the indirect one, thus minimising the risk of injury. It will be enough to perform a single repetition, expressing oneself to the maximum of one's ability, using a load equal to or greater than 80% of one's own 1RM (more details at www.forzamassimarelativa.it).` },
+        { p: `The results obtained confirm an inextricable relationship between the time of the concentric phase, the vertical distance travelled by the barbell in that same phase and the Fmcp in the flat bench press; this allows us to monitor and prescribe the training load without the need to perform the direct 1RM test or the indirect one, thus minimising the risk of injury. It will be enough to perform a single repetition, expressing oneself to the maximum of one's ability, using a load equal to or greater than 80% of one's own 1RM.` },
 
         { h: "BIBLIOGRAPHY" },
         { ul: [`Bosco Carmelo., “La forza muscolare, aspetti fisiologici ed applicazioni pratiche” - SSS, Roma 1997`, `d’Ambrosio Emanuele., “La forza e le sue espressioni nel pugilato dilettantistico” - Tesi di laurea di scienze motorie, università degli studi di Urbino “Carlo Bo”, 2009`, `Sanchez-Medina L et al. Importance of the Propulsive Phase in Strength Assessment - Int J Sports Med 2010; 31: 123 - 129`, `Vittori Carlo., “L’allenamento delle specialità di corsa veloce per gli atleti d’elite” CSR, Roma 2004.`, `Vittori Carlo., “Nervi e cuore saldi, l’allenamento del velocista nelle sue componenti motivazionali e biologiche” - Calzetti e Mariucci editori, Perugia 2014`, `Wilmore Jack H., Costill David L. - “Fisiologia dell’esercizio fisico e dello sport” - Calzetti e Mariucci editori, Perugia 2005`, `Zatsiorsky Vladimir M., Kraemer William J. - “Scienza e pratica dell’allenamento della forza” - Calzetti e Mariucci editori, Perugia 2008`] },
 
         { h: "WEB SOURCES" },
-        { ul: [`Argentiero Giuseppe - La relatività della forza massima www.forzamassimarelativa.it`] },
+        { ul: [`Argentiero Giuseppe - La relatività della forza massima`] },
 
         { h: "ACKNOWLEDGEMENTS" },
         { p: `The author thanks the FIPE Puglia regional committee and the LIFE CORE FIT CENTER gym of Andrea Balestra, viale Belgio 19 Francavilla Fontana.` },

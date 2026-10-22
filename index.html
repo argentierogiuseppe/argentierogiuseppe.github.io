@@ -20,7 +20,7 @@
     <meta property="og:title" content="Giuseppe Argentiero" />
     <meta property="og:description" content="" data-i18n-meta="seo.description" />
 
-    <link rel="stylesheet" href="./assets/css/styles.css?v=20260811b" />
+    <link rel="stylesheet" href="./assets/css/styles.css?v=20261022a" />
   </head>
   <body>
     <header class="nav">
@@ -29,7 +29,7 @@
         <a href="#about" data-i18n="nav.about"></a>
         <a href="#method" data-i18n="nav.method"></a>
         <a href="#articles" data-i18n="nav.articles"></a>
-        <a href="#contact" data-i18n="nav.contact"></a>
+        <a href="#contact" data-needs-link="email" data-i18n="nav.contact"></a>
       </nav>
       <nav class="lang" aria-label="Language switch">
         <button type="button" data-lang="it">IT</button>
@@ -46,7 +46,7 @@
         <p class="hero-subheadline" data-i18n="hero.subheadline"></p>
         <div class="cta-row">
           <a class="btn btn-primary" data-link="blog" data-i18n="hero.ctaBlog" href="#" target="_blank" rel="noopener noreferrer"></a>
-          <a class="btn btn-ghost" href="#contact" data-i18n="hero.ctaContact"></a>
+          <a class="btn btn-ghost" href="#contact" data-needs-link="email" data-i18n="hero.ctaContact"></a>
         </div>
       </section>
 
@@ -90,16 +90,8 @@
         <ul class="edu-list" id="publications-list"></ul>
       </section>
 
-      <!-- BLOG -->
-      <section class="section book-band" id="blog">
-        <p class="kicker" data-i18n="blog.kicker"></p>
-        <h2 class="section-title" data-i18n="blog.title"></h2>
-        <p class="book-text" data-i18n="blog.text"></p>
-        <a class="btn btn-primary" data-link="blog" data-i18n="blog.cta" href="#" target="_blank" rel="noopener noreferrer"></a>
-      </section>
-
       <!-- CONTACT -->
-      <section class="section section-alt" id="contact">
+      <section class="section section-alt" id="contact" data-needs-link="email">
         <p class="kicker" data-i18n="contact.kicker"></p>
         <h2 class="section-title" data-i18n="contact.title"></h2>
         <p class="contact-text" data-i18n="contact.text"></p>
@@ -114,7 +106,7 @@
 
     <!-- ?v= busts the 10-minute GitHub Pages cache: bump it (all pages) on every
          deploy that touches content.js, main.js or styles.css. -->
-    <script src="./assets/js/content.js?v=20260811b"></script>
-    <script src="./assets/js/main.js?v=20260811b"></script>
+    <script src="./assets/js/content.js?v=20261022a"></script>
+    <script src="./assets/js/main.js?v=20261022a"></script>
   </body>
 </html>
